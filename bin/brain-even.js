@@ -8,28 +8,30 @@ import { welcome } from '../src/cli.js';
 const a = 3; // Кол-во правильных ответов подряд
 const randMax = 100; // Максимальное случайное число
 
-const brainEven = (n, name) => {
+const brainEvenStart = (n, name) => {
   let correctCount = 0;
-  let number = 0;
-  let answer = '';
-  let correctAnswer;
+  
   while (correctCount < n) {
-    number = Math.round(Math.random() * randMax + 1);
-    correctAnswer = number % 2 === 0 ? 'yes' : 'no';
-    console.log(`Question: ${number}`);
-    answer = readlineSync.question('Your answer: ');
-    if (answer === correctAnswer) {
-      correctCount += 1;
-      console.log('Correct!');
-    } else {
-      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
-      console.log(`Let's try again, ${name}!`);
-      return 0;
-    }
+    if (brainEven(name) === 1) correctCount += 1;
+    else return 0;
   }
   console.log(`Congratulations, ${name}!`);
 };
 
+const brainEven = (name) => {
+    const number = Math.round(Math.random() * randMax + 1);
+    const correctAnswer = number % 2 === 0 ? 'yes' : 'no';
+    console.log(`Question: ${number}`);
+    const answer = readlineSync.question('Your answer: ');
+    if (answer === correctAnswer) {
+      console.log('Correct!');
+      return 1;
+    }
+    console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
+    console.log(`Let's try again, ${name}!`);
+    return 0;
+};
+
 const name = welcome();
 console.log('Answer "yes" if the number is even, otherwise answer "no".');
-brainEven(a, name);
+brainEvenStart(a, name);
