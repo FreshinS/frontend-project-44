@@ -6,3 +6,7 @@ export const welcome = () => {
   console.log(`Hello, ${name}`);
   return name;
 };
+
+export const getRandomInt = (max) => {
+  return Math.round(Math.random() * max + 1)
+}
