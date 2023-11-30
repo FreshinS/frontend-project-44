@@ -22,8 +22,9 @@ const brainEven = (n, name) => {
       correctCount += 1;
       console.log('Correct!');
     } else {
-      correctCount = 0;
       console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
+      console.log(`Let's try again, ${name}!`);
+      return 0;
     }
   }
   console.log(`Congratulations, ${name}!`);
