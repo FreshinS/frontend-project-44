@@ -25,4 +25,5 @@ const brainEven = (name) => {
 const gameName = brainEven;
 
 const name = welcome();
+console.log('Answer "yes" if the number is even, otherwise answer "no".');
 brainGameStart(a, name, gameName);

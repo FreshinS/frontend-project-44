@@ -35,4 +35,5 @@ const brainGCD = (name) => {
 const gameName = brainGCD;
 
 const name = welcome();
+console.log('Find the greatest common divisor of given numbers.');
 brainGameStart(c, name, gameName);

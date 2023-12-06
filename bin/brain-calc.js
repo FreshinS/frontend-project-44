@@ -41,4 +41,5 @@ const brainCalc = (name) => {
 const gameName = brainCalc;
 
 const name = welcome();
+console.log('What is the result of the expression?');
 brainGameStart(a, name, gameName);
