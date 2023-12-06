@@ -19,7 +19,7 @@ const findGCD = (num1, num2) => {
 };
 
 const brainGCD = (name) => {
-  const [number1, number2] = [getRandomInt(randMax), getRandomInt(randMax)];
+  const [number1, number2] = [getRandomInt(0, randMax), getRandomInt(0, randMax)];
   const correctAnswer = findGCD(number1, number2);
   console.log(`Question: ${number1} ${number2}`);
   const answer = readlineSync.question('Your answer: ');

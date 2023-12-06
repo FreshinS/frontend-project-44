@@ -9,7 +9,7 @@ const a = 3; // Кол-во правильных ответов подряд
 const randMax = 100; // Максимальное случайное число
 
 const brainEven = (name) => {
-  const number = getRandomInt(randMax);
+  const number = getRandomInt(0, randMax);
   const correctAnswer = number % 2 === 0 ? 'yes' : 'no';
   console.log(`Question: ${number}`);
   const answer = readlineSync.question('Your answer: ');

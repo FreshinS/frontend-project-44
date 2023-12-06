@@ -7,7 +7,7 @@ export const welcome = () => {
   return name;
 };
 
-export const getRandomInt = (max) => Math.floor(Math.random() * (max + 1));
+export const getRandomInt = (min, max) => Math.floor(Math.random() * (max + 1 - min) + min);
 
 export const brainGameStart = (n, name, gameName) => {
   console.log('Find the greatest common divisor of given numbers.');
