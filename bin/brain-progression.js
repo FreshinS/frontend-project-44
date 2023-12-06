@@ -49,4 +49,5 @@ const brainProgression = (name) => {
 const gameName = brainProgression;
 
 const name = welcome();
+console.log('What number is missing in the progression?');
 brainGameStart(a, name, gameName);
