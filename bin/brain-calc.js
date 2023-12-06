@@ -11,8 +11,7 @@ const randMax = 25; // Максимальное случайное число
 const operations = ['+', '-', '*'];
 
 const brainCalc = (name) => {
-  const number1 = getRandomInt(randMax);
-  const number2 = getRandomInt(randMax);
+  const [number1, number2] = [getRandomInt(randMax), getRandomInt(randMax)];
   const operation = getRandomInt(2);
   let correctAnswer;
   switch (operation) {
