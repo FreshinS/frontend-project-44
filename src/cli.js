@@ -7,6 +7,4 @@ export const welcome = () => {
   return name;
 };
 
-export const getRandomInt = (max) => {
-  return Math.floor(Math.random() * (max + 1));
-}
+export const getRandomInt = (max) => Math.floor(Math.random() * (max + 1));
