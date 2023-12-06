@@ -22,7 +22,7 @@ const brainEven = (name) => {
   return 0;
 };
 
-const gameName = brainEven
+const gameName = brainEven;
 
 const name = welcome();
 brainGameStart(a, name, gameName);
