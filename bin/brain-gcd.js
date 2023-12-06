@@ -2,7 +2,7 @@
 
 // Импорты
 import readlineSync from 'readline-sync';
-import { welcome, getRandomInt } from '../src/cli.js';
+import { welcome, getRandomInt, brainGameStart } from '../src/cli.js';
 
 // Настройка игры
 const c = 3; // Кол-во правильных ответов подряд
@@ -32,16 +32,7 @@ const brainGCD = (name) => {
   return 0;
 };
 
-const brainGCDStart = (n, name) => {
-  console.log('Find the greatest common divisor of given numbers.');
-  let correctCount = 0;
-  while (correctCount < n) {
-    if (brainGCD(name) === 1) correctCount += 1;
-    else return 0;
-  }
-  console.log(`Congratulations, ${name}!`);
-  return 0;
-};
+const gameName = brainGCD;
 
 const name = welcome();
-brainGCDStart(c, name);
+brainGameStart(c, name, gameName);

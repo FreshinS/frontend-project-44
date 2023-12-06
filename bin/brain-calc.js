@@ -2,7 +2,7 @@
 
 // Импорты
 import readlineSync from 'readline-sync';
-import { welcome, getRandomInt } from '../src/cli.js';
+import { welcome, getRandomInt, brainGameStart } from '../src/cli.js';
 
 // Настройка игры
 const a = 3; // Кол-во правильных ответов подряд
@@ -38,16 +38,7 @@ const brainCalc = (name) => {
   return 0;
 };
 
-const brainCalcStart = (n, name) => {
-  let correctCount = 0;
-  console.log('What is the result of the expression?');
-  while (correctCount < n) {
-    if (brainCalc(name) === 1) correctCount += 1;
-    else return 0;
-  }
-  console.log(`Congratulations, ${name}!`);
-  return 0;
-};
+const gameName = brainCalc;
 
 const name = welcome();
-brainCalcStart(a, name);
+brainGameStart(a, name, gameName);

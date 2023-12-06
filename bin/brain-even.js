@@ -2,7 +2,7 @@
 
 // Импорты
 import readlineSync from 'readline-sync';
-import { welcome, getRandomInt } from '../src/cli.js';
+import { welcome, getRandomInt, brainGameStart } from '../src/cli.js';
 
 // Настройка игры
 const a = 3; // Кол-во правильных ответов подряд
@@ -22,16 +22,7 @@ const brainEven = (name) => {
   return 0;
 };
 
-const brainEvenStart = (n, name) => {
-  console.log('Answer "yes" if the number is even, otherwise answer "no".');
-  let correctCount = 0;
-  while (correctCount < n) {
-    if (brainEven(name) === 1) correctCount += 1;
-    else return 0;
-  }
-  console.log(`Congratulations, ${name}!`);
-  return 0;
-};
+const gameName = brainEven
 
 const name = welcome();
-brainEvenStart(a, name);
+brainGameStart(a, name, gameName);
