@@ -9,6 +9,7 @@ const a = 3; // Кол-во правильных ответов подряд
 const randMax = 100;
 
 const checkPrime = (n) => {
+  if (n === 0 || n === 1) return 'no';
   let isPrime = true;
   let i = 2;
   while (i <= Math.sqrt(n) && isPrime === true) {
