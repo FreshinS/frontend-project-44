@@ -11,7 +11,7 @@
 ![brain-calc](https://i.imgur.com/qZk9OLo.png)
 
 ### brain-gcd
-![brain-gcd](hhttps://i.imgur.com/Zwv2FjI.png)
+![brain-gcd](https://i.imgur.com/Zwv2FjI.png)
 
 ### brain-progression
 ![brain-progression](https://i.imgur.com/aatD5dG.png)
