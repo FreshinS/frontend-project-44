@@ -10,7 +10,6 @@ const a = 3; // Кол-во правильных ответов подряд
 const randMax = 100;
 
 const checkPrime = (n) => {
-  if (n === 0 || n === 1) return 'no';
   let isPrime = true;
   let i = 2;
   while (i <= Math.sqrt(n) && isPrime === true) {
@@ -24,7 +23,13 @@ const checkPrime = (n) => {
 
 const brainPrime = (name) => {
   const number = getRandomInt(0, randMax);
-  const correctAnswer = checkPrime(number);
+  let correctAnswer = '';
+  if (number === 0 || number === 1) {
+    correctAnswer = 'no';
+  }
+  else {
+    correctAnswer = checkPrime(number);
+  }
   console.log(`Question: ${number}`);
   const answer = readlineSync.question('Your answer: ');
   if (answer === correctAnswer) {
