@@ -26,8 +26,7 @@ const brainPrime = (name) => {
   let correctAnswer = '';
   if (number === 0 || number === 1) {
     correctAnswer = 'no';
-  }
-  else {
+  } else {
     correctAnswer = checkPrime(number);
   }
   console.log(`Question: ${number}`);
