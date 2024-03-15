@@ -1,4 +1,5 @@
 import { welcome } from '../src/cli.js';
+import readlineSync from 'readline-sync';
 
 /*export const answerCheck = (answer, correctAnswer, name) => {
   if (typeof correctAnswer === Number) {
@@ -24,6 +25,10 @@ export const answerCheck = (answer, correctAnswer, name) => {
   return 0;
 }
 
+export const getAnswer = (question) => {
+  console.log(`Question: ${question}`);
+  return readlineSync.question('Your answer: ');
+}
 
 export const brainGameStart = (n, str, gameName) => {
   const name = welcome();

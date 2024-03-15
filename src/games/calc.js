@@ -1,6 +1,5 @@
-import readlineSync from 'readline-sync';
 import { getRandomInt } from '../cli.js';
-import { answerCheck } from '../index.js';
+import { answerCheck, getAnswer } from '../index.js';
 
 
 // Настройка игры
@@ -27,7 +26,7 @@ export const brainCalc = (name) => {
     default:
       return 0;
   }
-  console.log(`Question: ${number1} ${operations[operation]} ${number2}`);
-  const answer = readlineSync.question('Your answer: ');
+  const question = `${number1} ${operations[operation]} ${number2}`;
+  const answer = getAnswer(question);
   return answerCheck(answer, correctAnswer, name);
 };
