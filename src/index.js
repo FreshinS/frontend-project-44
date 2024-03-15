@@ -1,12 +1,29 @@
 import { welcome } from '../src/cli.js';
 
+/*export const answerCheck = (answer, correctAnswer, name) => {
+  if (typeof correctAnswer === Number) {
+    if (parseInt(answer, 10) === correctAnswer) {
+      return 1;
+    }
+    loseGame(correctAnswer, answer, name);
+    return 0;
+  }
+  if (answer === correctAnswer) {
+    return 1;
+  }
+  loseGame(correctAnswer, answer, name);
+  return 0;
+}*/
+
 export const answerCheck = (answer, correctAnswer, name) => {
-  if (parseInt(answer, 10) === correctAnswer) {
+  console.log(typeof correctAnswer);
+  if ((typeof correctAnswer === 'number' ? parseInt(answer, 10) : answer) === correctAnswer) {
     return 1;
   }
   loseGame(correctAnswer, answer, name);
   return 0;
 }
+
 
 export const brainGameStart = (n, str, gameName) => {
   const name = welcome();
