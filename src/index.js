@@ -1,4 +1,14 @@
-export const brainGameStart = (n, name, gameName) => {
+import readlineSync from 'readline-sync';
+import { welcome } from './cli.js';
+
+export const getAnswer = (question) => {
+  console.log(`Question: ${question}`);
+  return readlineSync.question('Your answer: ');
+};
+
+export const brainGameStart = (n, str, gameName) => {
+  const name = welcome();
+  console.log(str);
   let correctCount = 0;
   while (correctCount < n) {
     if (gameName(name) === 1) {
@@ -13,4 +23,13 @@ export const brainGameStart = (n, name, gameName) => {
 export const loseGame = (correctAnswer, answer, name) => {
   console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
   console.log(`Let's try again, ${name}!`);
+};
+
+export const answerCheck = (answer, correctAnswer, name) => {
+  console.log(typeof correctAnswer);
+  if ((typeof correctAnswer === 'number' ? parseInt(answer, 10) : answer) === correctAnswer) {
+    return 1;
+  }
+  loseGame(correctAnswer, answer, name);
+  return 0;
 };
