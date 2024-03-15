@@ -22,5 +22,5 @@ export const brainGCD = (name) => {
     const correctAnswer = findGCD(number1, number2);
     const question = `${number1} ${number2}`;
     const answer = getAnswer(question);
-    return answerCheck(answer, correctAnswer);
+    return answerCheck(answer, correctAnswer, name);
   };
