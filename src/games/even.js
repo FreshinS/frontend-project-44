@@ -12,5 +12,5 @@ export const brainEven = (name) => {
   const correctAnswer = number % 2 === 0 ? 'yes' : 'no';
   const question = `${number}`;
   const answer = getAnswer(question);
-  return answerCheck(answer, correctAnswer, name)
+  return answerCheck(answer, correctAnswer, name);
 };
