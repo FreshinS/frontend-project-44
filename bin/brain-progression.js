@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 
 // Импорты
-import readlineSync from 'readline-sync';
+import readlineSync, { question } from 'readline-sync';
 import { welcome, getRandomInt } from '../src/cli.js';
-import { brainGameStart, loseGame } from '../src/index.js';
+import { answerCheck, brainGameStart } from '../src/index.js';
 
 // Настройка игры
 const a = 3; // Кол-во правильных ответов подряд
@@ -38,11 +38,7 @@ const brainProgression = (name) => {
   const correctAnswer = progression[hidden];
   console.log(`Question: ${printProgression(progression, hidden)}`);
   const answer = readlineSync.question('Your answer: ');
-  if (parseInt(answer, 10) === correctAnswer) {
-    return 1;
-  }
-  loseGame(correctAnswer, answer, name);
-  return 0;
+  return answerCheck(answer, correctAnswer, name);
 };
 
 const gameName = brainProgression;

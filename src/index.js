@@ -1,4 +1,16 @@
-export const brainGameStart = (n, name, gameName) => {
+import { welcome } from '../src/cli.js';
+
+export const answerCheck = (answer, correctAnswer, name) => {
+  if (parseInt(answer, 10) === correctAnswer) {
+    return 1;
+  }
+  loseGame(correctAnswer, answer, name);
+  return 0;
+}
+
+export const brainGameStart = (n, str, gameName) => {
+  const name = welcome();
+  console.log(str);
   let correctCount = 0;
   while (correctCount < n) {
     if (gameName(name) === 1) {
