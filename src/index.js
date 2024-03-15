@@ -1,34 +1,10 @@
-import { welcome } from '../src/cli.js';
 import readlineSync from 'readline-sync';
-
-/*export const answerCheck = (answer, correctAnswer, name) => {
-  if (typeof correctAnswer === Number) {
-    if (parseInt(answer, 10) === correctAnswer) {
-      return 1;
-    }
-    loseGame(correctAnswer, answer, name);
-    return 0;
-  }
-  if (answer === correctAnswer) {
-    return 1;
-  }
-  loseGame(correctAnswer, answer, name);
-  return 0;
-}*/
-
-export const answerCheck = (answer, correctAnswer, name) => {
-  console.log(typeof correctAnswer);
-  if ((typeof correctAnswer === 'number' ? parseInt(answer, 10) : answer) === correctAnswer) {
-    return 1;
-  }
-  loseGame(correctAnswer, answer, name);
-  return 0;
-}
+import { welcome } from './cli.js';
 
 export const getAnswer = (question) => {
   console.log(`Question: ${question}`);
   return readlineSync.question('Your answer: ');
-}
+};
 
 export const brainGameStart = (n, str, gameName) => {
   const name = welcome();
@@ -47,4 +23,13 @@ export const brainGameStart = (n, str, gameName) => {
 export const loseGame = (correctAnswer, answer, name) => {
   console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
   console.log(`Let's try again, ${name}!`);
+};
+
+export const answerCheck = (answer, correctAnswer, name) => {
+  console.log(typeof correctAnswer);
+  if ((typeof correctAnswer === 'number' ? parseInt(answer, 10) : answer) === correctAnswer) {
+    return 1;
+  }
+  loseGame(correctAnswer, answer, name);
+  return 0;
 };

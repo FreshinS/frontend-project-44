@@ -1,7 +1,6 @@
 import { getRandomInt } from '../cli.js';
 import { answerCheck, getAnswer } from '../index.js';
 
-
 // Настройка игры
 const randMax = 25; // Максимальное случайное число
 export const str = 'What is the result of the expression?';

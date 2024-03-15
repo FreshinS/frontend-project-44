@@ -19,12 +19,12 @@ const generateProgression = (start, len, step) => {
 };
 
 const printProgression = (arr, index) => {
-  let str = '';
+  let str1 = '';
   for (let i = 0; i < arr.length; i += 1) {
-    if (i !== index) str += `${arr[i]} `;
-    else str += '.. ';
+    if (i !== index) str1 += `${arr[i]} `;
+    else str1 += '.. ';
   }
-  return str;
+  return str1;
 };
 
 export const brainProgression = (name) => {

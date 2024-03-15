@@ -28,5 +28,5 @@ export const brainPrime = (name) => {
   }
   const question = `${number}`;
   const answer = getAnswer(question);
-  return answerCheck(answer, correctAnswer, name)
+  return answerCheck(answer, correctAnswer, name);
 };
