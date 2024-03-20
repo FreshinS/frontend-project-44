@@ -5,7 +5,7 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/41751ebfee1a0f1007de/maintainability)](https://codeclimate.com/github/FreshinS/frontend-project-44/maintainability)
 
 ### brain-even
-![brain-even]([https://i.imgur.com/8BKbSzH.png](https://asciinema.org/connect/cebb295b-c98e-4866-9919-c8ded8137b55))
+[![asciicast](https://asciinema.org/a/frzp6c2az1dOPqymv9JWmAxzV.svg)](https://asciinema.org/a/frzp6c2az1dOPqymv9JWmAxzV)
 
 ### brain-calc
 ![brain-calc](https://i.imgur.com/qZk9OLo.png)
