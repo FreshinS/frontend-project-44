@@ -9,6 +9,7 @@ export const getAnswer = (question) => {
 export const brainGameStart = (n, str, gameName) => {
   const name = welcome();
   let correctCount = 0;
+  console.log(str);
   while (correctCount < n) {
     if (gameName(name) === 1) {
       console.log('Correct!');
@@ -25,7 +26,6 @@ export const loseGame = (correctAnswer, answer, name) => {
 };
 
 export const answerCheck = (answer, correctAnswer, name) => {
-  console.log(typeof correctAnswer);
   if ((typeof correctAnswer === 'number' ? parseInt(answer, 10) : answer) === correctAnswer) {
     return 1;
   }
