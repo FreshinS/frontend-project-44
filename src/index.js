@@ -8,7 +8,6 @@ export const getAnswer = (question) => {
 
 export const brainGameStart = (n, str, gameName) => {
   const name = welcome();
-  console.log(str);
   let correctCount = 0;
   while (correctCount < n) {
     if (gameName(name) === 1) {
